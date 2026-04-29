@@ -5,6 +5,8 @@ services:
       - "127.0.0.1:5432:5432"
     env_file:
       - .env.local
+    volumes:
+      - postgres-data:/var/lib/postgres/data
 
 # add the new service here
   minio:
@@ -20,4 +22,5 @@ services:
 
 # make sure to use volumes here
 volumes:
-  minion-data:
+  minio-data:
+  postgres-data:

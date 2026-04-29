@@ -23,10 +23,10 @@ model Counter {
   @@map("counters")
 }
 
-model Images {
+model Image {
   id Int @id @default(autoincrement())
 
-  imagePath String @unique()
+  url String @unique()
   createdAt DateTime @default(now()) @map("created_at")
 }
 
