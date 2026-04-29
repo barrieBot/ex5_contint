@@ -22,6 +22,8 @@
     "schema": "./app/database/prisma/schema.prisma"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1038.0",
+    "@fastify/multipart": "^10.0.0",
     "@prisma/client": "^6.4.0",
     "fastify": "^5.2.1"
   },
