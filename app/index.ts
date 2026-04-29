@@ -20,7 +20,7 @@ const ensureBucketExists = async () => {
   try {
     console.log(`🔍 Checking if bucket "${process.env.AWS_S3_BUCKET_NAME!}" exists...`);
 
-    if (!process.env.AWS_S3_BUCKET_NAME!) {
+    if (!process.env.AWS_S3_BUCKET_NAME) {
       throw new Error("AWS_S3_BUCKET_NAME is missing. Check .env file.");
     }
 

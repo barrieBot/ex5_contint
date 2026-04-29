@@ -9,7 +9,7 @@
     "migrate": "dotenv -e .env -- npx prisma migrate deploy",
     "prisma:generate": "dotenv -e .env -- npx prisma generate",
     "cleanup:dev": "npx rimraf dist && npx rimraf node_modules && npm install",
-    "setup:dev": "dotenv -e .env.local -- npm run setdown:dev && npm run cleanup:dev && docker compose --file local-compose.yaml up --detach && npm run prisma:generate:dev && npm run migrate:dev",
+    "setup:dev": "dotenv -e .env.local -- npm run setdown:dev && docker compose --file local-compose.yaml up --detach && npm run prisma:generate:dev && npm run migrate:dev",
     "setdown:dev": "dotenv -e .env.local -- docker compose --file local-compose.yaml down",
     "start:dev": "dotenv -e .env.local -- nodemon ./app/index.ts",
     "migrate:dev": "dotenv -e .env.local -- npx prisma migrate dev",
@@ -25,13 +25,14 @@
     "@aws-sdk/client-s3": "^3.1038.0",
     "@fastify/multipart": "^10.0.0",
     "@prisma/client": "^6.4.0",
-    "fastify": "^5.2.1"
+    "fastify": "^5.2.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
     "nodemon": "^3.1.9",
     "prisma": "^6.4.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   }
 }
